@@ -229,6 +229,9 @@ footer {
     background-color: var(--color-for-logo);
     cursor: pointer;
 }
+.select{
+    padding-bottom: 90px;
+}
 .select-item {
     display: inline-block;
     margin-right: 8px;
