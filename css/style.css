@@ -195,7 +195,6 @@ header {
 .footer-list {
     padding-left: 0px;
     font-style: inherit;
-    margin-top: 20px;
 }
 .footer-list li:not(:last-child) {
     margin-bottom: 9px;
@@ -230,6 +229,8 @@ footer {
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+    display: block;
+    margin-bottom: 20px;
 }
 
 /* стили для portfolio */
