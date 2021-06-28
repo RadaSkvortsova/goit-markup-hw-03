@@ -22,9 +22,9 @@ body {
     color: var(--primary-text-color);
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    font-style: normal;
     letter-spacing: 0.03em;
     background-color: var(--main-background-color);
-    font-style: normal;
 }
 .container {
     width: 1200px;
@@ -33,9 +33,9 @@ body {
     margin: auto;
 }
 header {
-    padding-top: 25px;
+    padding-top: 24px;
     padding-bottom: 25px;
-    border: 1px solid #ececec;
+    border-bottom: 1px solid #ececec;
 }
 .logo {
     color: var(--primary-text-color);
@@ -44,7 +44,7 @@ header {
     font-weight: 700;
     font-size: 26px;
     letter-spacing: 0.03em;
-    line-height: 1.2;
+    line-height: 1.19;
 }
 .logo-color {
     color: var(--color-for-logo);
@@ -106,6 +106,9 @@ header {
     padding-top: 200px;
     padding-bottom: 200px;
 }
+.hero .container {
+    width: 696px;
+}
 .hero-title {
     font-size: 44px;
     font-weight: 900;
@@ -128,6 +131,7 @@ header {
 }
 .section-indent {
     padding-top: 94px;
+    padding-bottom: 94px;
 }
 .skills-list {
     display: flex;
@@ -160,7 +164,7 @@ header {
     display: flex;
     justify-content: space-between;
 }
-.work-list li {
+.work-list-item {
     width: 370px;
 }
 .team {
@@ -173,8 +177,15 @@ header {
 }
 .team-items {
     display: flex;
-    justify-content: space-between;
     text-align: center;
+}
+.team-desc:not(:last-child) {
+    margin-right: 30px;
+}
+.team-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 .team-items li {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -194,7 +205,7 @@ header {
 }
 .footer-list {
     padding-left: 0px;
-    font-style: inherit;
+    font-style: normal;
 }
 .footer-list li:not(:last-child) {
     margin-bottom: 9px;
@@ -204,7 +215,6 @@ header {
     color: var(--title-text-color);
     line-height: 1.71;
     font-size: inherit;
-    font-style: inherit;
 }
 .footer-list-item:hover,
 .footer-list-item:focus {
@@ -235,10 +245,14 @@ footer {
 
 /* стили для portfolio */
 
-.portfolio {
-    text-align: center;
-    visibility: hidden;
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
 }
+
 .button-item {
     border: none;
     padding: 6px 22px;
@@ -256,21 +270,28 @@ footer {
 }
 .select {
     padding-bottom: 90px;
+    padding-top: 94px;
 }
 .select-item {
-    display: inline-block;
+    text-align: center;
+}
+.select-item:not(:last-child) {
     margin-right: 8px;
 }
 .select-button {
-    text-align: center;
     margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .img {
     display: flex;
     flex-wrap: wrap;
 }
 .img-style {
-    width: 360px;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 .img-list {
     padding-top: 20px;
@@ -296,6 +317,9 @@ footer {
     letter-spacing: 0.06em;
     text-decoration: none;
     color: var(--primary-text-color);
+}
+.img-title {
+    margin-bottom: 4px;
 }
 .img-decorate .img-desc {
     color: var(--title-text-color);
