@@ -132,6 +132,9 @@ header {
 .section-indent {
     padding-bottom: 94px;
 }
+.skills {
+    padding-top: 94px;
+}
 .skills-list {
     display: flex;
 }
